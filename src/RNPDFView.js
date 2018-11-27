@@ -78,5 +78,8 @@ const componentInterface = {
 
 
 export default requireNativeComponent(
-    Platform.OS === 'iOS' ? 'RNPDFView' : 'PDFView',
+    Platform.select({
+      ios: 'RNPDFView',
+      default: 'PDFView'
+    }),
     componentInterface);

@@ -5,6 +5,7 @@ import renderer from 'react-test-renderer';
 import {
   findNodeHandle,
   NativeModules,
+  requireNativeComponent
 } from 'react-native';
 
 import PDFVIew from '../index';

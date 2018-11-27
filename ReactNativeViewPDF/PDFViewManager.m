@@ -1,7 +1,7 @@
-#import "RNPDFViewManager.h"
+#import "PDFViewManager.h"
 #import <React/RCTUIManager.h>
 
-@implementation RNPDFViewManager
+@implementation PDFViewManager
 
 RCT_EXPORT_MODULE()
 
@@ -30,7 +30,7 @@ RCT_EXPORT_VIEW_PROPERTY(onError, RCTDirectEventBlock)
 
 RCT_EXPORT_METHOD(reload: (nonnull NSNumber *)reactTag resolver: (RCTPromiseResolveBlock)resolve rejecter: (RCTPromiseRejectBlock)reject) {
     dispatch_async(dispatch_get_main_queue(), ^{
-        PDFView *pdfView = (PDFView *)[self.bridge.uiManager viewForReactTag: reactTag];
+        RNPDFView *pdfView = (RNPDFView *)[self.bridge.uiManager viewForReactTag: reactTag];
         if (!pdfView) {
             reject(ERROR_INVALID_REACT_TAG, [NSString stringWithFormat: @"ReactTag passed: %@", reactTag], nil);
             return;
