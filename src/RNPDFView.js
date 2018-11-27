@@ -1,4 +1,4 @@
-import { requireNativeComponent, ViewPropTypes } from 'react-native';
+import { requireNativeComponent, ViewPropTypes, Platform } from 'react-native';
 import PropTypes from 'prop-types';
 
 
@@ -77,4 +77,6 @@ const componentInterface = {
 };
 
 
-export default requireNativeComponent('PDFView', componentInterface);
+export default requireNativeComponent(
+    Platform.OS === 'iOS' ? 'RNPDFView' : 'PDFView',
+    componentInterface);

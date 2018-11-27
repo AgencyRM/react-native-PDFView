@@ -2,7 +2,7 @@
 #import "PDFConstants.h"
 #import <WebKit/WebKit.h>
 
-@interface PDFView : RCTView <WKNavigationDelegate>
+@interface RNPDFView : RCTView <WKNavigationDelegate>
 
 @property (nonatomic, copy) NSString *resource;
 @property (nonatomic, copy) NSString *resourceType;

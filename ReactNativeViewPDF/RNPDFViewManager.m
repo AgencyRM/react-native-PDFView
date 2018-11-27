@@ -1,27 +1,27 @@
-#import "PDFViewManager.h"
+#import "RNPDFViewManager.h"
 #import <React/RCTUIManager.h>
 
-@implementation PDFViewManager
+@implementation RNPDFViewManager
 
 RCT_EXPORT_MODULE()
 
-RCT_CUSTOM_VIEW_PROPERTY(resource, NSString, PDFView) {
+RCT_CUSTOM_VIEW_PROPERTY(resource, NSString, RNPDFView) {
     [view setResource: json ? [RCTConvert NSString: json] : nil];
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(resourceType, NSString, PDFView) {
+RCT_CUSTOM_VIEW_PROPERTY(resourceType, NSString, RNPDFView) {
     [view setResourceType: json ? [RCTConvert NSString: json] : nil];
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(textEncoding, NSString, PDFView) {
+RCT_CUSTOM_VIEW_PROPERTY(textEncoding, NSString, RNPDFView) {
     [view setTextEncoding: json ? [RCTConvert NSString: json] : UTF_8];
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(urlProps, NSDictionary, PDFView) {
+RCT_CUSTOM_VIEW_PROPERTY(urlProps, NSDictionary, RNPDFView) {
     [view setUrlProps: json ? [RCTConvert NSDictionary: json] : nil];
 }
 
-RCT_CUSTOM_VIEW_PROPERTY(fadeInDuration, NSTimeInterval, PDFView) {
+RCT_CUSTOM_VIEW_PROPERTY(fadeInDuration, NSTimeInterval, RNPDFView) {
     [view setFadeInDuration: json ? [RCTConvert NSTimeInterval: json] : 0.0];
 }
 
@@ -46,7 +46,7 @@ RCT_EXPORT_METHOD(reload: (nonnull NSNumber *)reactTag resolver: (RCTPromiseReso
 }
 
 - (UIView *)view {
-    self.pdfView = [[PDFView alloc] init];
+    self.pdfView = [[RNPDFView alloc] init];
     return self.pdfView;
 }
 
