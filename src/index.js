@@ -136,7 +136,7 @@ class PDFView extends React.Component<Props, *> {
           UIManager.PDFView.Commands.reload,
           [],
         ),
-        ios: async () => NativeModules.PDFViewManager.reload(handle),
+        ios: async () => NativeModules.RNPDFViewManager.reload(handle),
       })();
     } else {
       throw new Error('No ref to PDFView component, check that component is mounted');

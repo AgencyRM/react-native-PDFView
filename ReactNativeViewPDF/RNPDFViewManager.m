@@ -1,7 +1,7 @@
-#import "PDFViewManager.h"
+#import "RNPDFViewManager.h"
 #import <React/RCTUIManager.h>
 
-@implementation PDFViewManager
+@implementation RNPDFViewManager
 
 RCT_EXPORT_MODULE()
 

@@ -2,7 +2,7 @@
 #import <React/RCTConvert.h>
 #import "RNPDFView.h"
 
-@interface PDFViewManager : RCTViewManager
+@interface RNPDFViewManager : RCTViewManager
 
 @property (nonatomic) RNPDFView *pdfView;
 
